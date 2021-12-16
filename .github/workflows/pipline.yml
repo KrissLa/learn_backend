@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run lint
-        run: docker-compose build dev && docker-compose run --rm dev go test ./app/...
+        run: make lint_in_docker
