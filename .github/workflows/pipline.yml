@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Run lint
-        run: make test_in_docker
+        run: docker-compose build dev && docker-compose run --rm dev go test ./app/...
