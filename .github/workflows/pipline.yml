@@ -10,5 +10,6 @@ jobs:
     name: Run linter
     runs-on: ubuntu-20.04
     steps:
+      - uses: actions/checkout@v2
       - name: Run lint
         run: docker-compose build dev && docker-compose run --rm dev go test ./app/...
