@@ -23,6 +23,7 @@ RUN git add . \
 
 
 FROM alpine:3.15 as app
+WORKDIR /app
 
 COPY --from=dev /DEV/build/app ./app
 
